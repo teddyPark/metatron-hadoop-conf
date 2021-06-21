@@ -1,0 +1,27 @@
+[Unit]
+Description=Yarn Timeline-Service Daemon
+Documentation=http://hadoop.apache.org
+Requires=network.target
+After=network.target secondarynamenode.service resourcemanager.service
+ 
+[Service]   
+Environment="JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk"
+Environment="HADOOP_HOME=/usr/local/hadoop"
+Environment="HADOOP_CONF_DIR=/etc/hadoop/conf"
+Environment="YARN_CONF_DIR=/etc/hadoop/conf"
+Type=forking
+WorkingDirectory=/usr/local/hadoop
+User=yarn
+Group=hadoop
+PermissionsStartOnly=true
+ExecStartPre=/bin/mkdir -p /var/run/hadoop/yarn/
+ExecStartPre=/bin/chown -R yarn:hadoop /var/run/hadoop/yarn/
+ExecStart=/usr/local/hadoop/bin/yarn --daemon start timelineserver
+ExecStop=/usr/local/hadoop/bin/yarn --daemon stop timelineserver
+ExecReload=/usr/local/hadoop/bin/yarn --daemon restart timelineserver
+TimeoutSec=30
+Restart=on-failure
+ 
+[Install]
+WantedBy=default.target
+

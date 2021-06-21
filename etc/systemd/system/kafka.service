@@ -1,0 +1,24 @@
+[Unit]
+Description=Kafka Daemon
+Documentation=http://kafka.apache.org
+Requires=network.target
+After=network.target
+ 
+[Service]   
+Type=forking
+WorkingDirectory=/usr/local/kafka
+User=root
+Group=root
+PermissionsStartOnly=true
+ExecStartPre=/bin/mkdir -p /var/run/kafka/
+ExecStartPre=/bin/chown -R kafka:hadoop /var/run/kafka/
+ExecStart=/usr/local/kafka/bin/kafka start
+ExecStop=/usr/local/kafka/bin/kafka stop
+Execreload=/usr/local/kafka/bin/kafka restart
+TimeoutSec=30
+Restart=on-failure
+ 
+[Install]
+WantedBy=default.target
+
+

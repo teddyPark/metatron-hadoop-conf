@@ -1,0 +1,25 @@
+[Unit]
+Description=HDFS Datanode Daemon
+Documentation=http://hadoop.apache.org
+Requires=network.target
+After=network.target
+ 
+[Service]   
+Environment="JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk"
+Environment="HADOOP_HOME=/usr/local/hadoop"
+Environment="HADOOP_CONF_DIR=/etc/hadoop/conf"
+Type=forking
+WorkingDirectory=/usr/local/hadoop
+User=root
+Group=root
+PermissionsStartOnly=true
+ExecStartPre=/bin/mkdir -p /var/run/hadoop/hdfs/
+ExecStartPre=/bin/chown -R hdfs:hadoop /var/run/hadoop/hdfs/
+ExecStart=/usr/local/hadoop/bin/hdfs --daemon start datanode
+ExecStop=/usr/local/hadoop/bin/hdfs --daemon stop datanode
+ExecReload=/usr/local/hadoop/bin/hdfs --daemon restart datanode
+TimeoutSec=30
+Restart=on-failure
+ 
+[Install]
+WantedBy=default.target
