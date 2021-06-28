@@ -90,22 +90,45 @@ if ! shopt -q login_shell ; then # We're not a login shell
     unset -f pathmunge
 fi
 # vim:ts=4:sw=4
-export MAVEN_HOME=/usr/local/apache-maven-3.8.1
 
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
-export HADOOP_HOME=/usr/local/hadoop
-#export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
-#export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
-export HADOOP_CONF_DIR=/etc/hadoop/conf
-export YARN_CONF_DIR=/etc/hadoop/conf
-export TEZ_CONF_DIR=/etc/tez/conf
-export HADOOP_PID_DIR=/home/$USER/run
+# maven env-vars
+export MAVEN_HOME=/usr/local/apache-maven-3.8.1
  
+# java env-vars
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
+  
+# hadoop env-vars
+export HADOOP_HOME=/usr/local/hadoop
+export HADOOP_PID_DIR=/home/$USER/run
+export HADOOP_CONF_DIR=/etc/hadoop/conf
+ 
+# yarn env-vars
+export YARN_CONF_DIR=/etc/hadoop/conf
+ 
+# tez env-vars
+export TEZ_CONF_DIR=/etc/tez/conf
+ 
+# hbase env-vars
 export HBASE_HOME=/usr/local/hbase
 export HBASE_LOG_DIR=/var/log/hbase
+ 
+# zookeeper env-vars
 export ZOOBINDIR=/usr/local/zookeeper/bin
-
+ 
+# Hive env-vars
 export HIVE_HOME=/usr/local/hive
  
+# sqoop env-vars
+export SQOOP_HOME=/usr/local/sqoop
+ 
+# spark env-vars
+export SPARK_HOME=/usr/local/spark
+export PYSPARK_PYTHON=python3
+
+# oozie env-vars
+export OOZIE_HOME=/usr/local/oozie
+export OOZIE_CONFIG=/etc/oozie/conf
+ 
+# PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HADOOP_HOME/lib/native
-export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$HIVE_HOME/bin:$MAVEN_HOME/bin
+export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$HIVE_HOME/bin:$MAVEN_HOME/bin:$ZOOBINDIR:$SQOOP_HOME/bin:$SPARK_HOME/bin:$OOZIE_HOME/bin
