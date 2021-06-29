@@ -51,7 +51,7 @@ export OOZIE_ADMIN_PORT=11001
 
 # The host name Oozie server runs on
 #
-export OOZIE_HTTP_HOSTNAME=master1
+export OOZIE_HTTP_HOSTNAME=master1.metatron-dev
 
 # The base URL for callback URLs to Oozie
 #
@@ -61,5 +61,4 @@ export JAVA_LIBRARY_PATH=/usr/local/hadoop/lib/native/Linux-amd64-64
 # At least 1 minute of retry time to account for server downtime during
 # upgrade/downgrade
 export OOZIE_CLIENT_OPTS="${OOZIE_CLIENT_OPTS} -Doozie.connection.retry.count=5 "
-export OOZIE_TIMEZONE=Asia/Seoul
-export OOZIE_URL=http://master1:11000/oozie
+export OOZIE_URL=http://master1.metatron-dev:11000/oozie

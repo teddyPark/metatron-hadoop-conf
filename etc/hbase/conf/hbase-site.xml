@@ -207,7 +207,7 @@
     
     <property>
       <name>hbase.zookeeper.quorum</name>
-      <value>datanode1,datanode2,datanode3</value>
+      <value>datanode1.metatron-dev,datanode2.metatron-dev,datanode3.metatron-dev,datanode4.metatron-dev,datanode5.metatron-dev</value>
     </property>
     
     <property>

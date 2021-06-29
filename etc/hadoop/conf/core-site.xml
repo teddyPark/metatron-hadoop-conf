@@ -13,13 +13,12 @@
   See the License for the specific language governing permissions and
   limitations under the License. See accompanying LICENSE file.
 -->
-
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
     <property>
         <name>fs.defaultFS</name>
-        <value>hdfs://master1:8020</value>
+        <value>hdfs://master1.metatron-dev:8020</value>
     </property>
 
     <property>

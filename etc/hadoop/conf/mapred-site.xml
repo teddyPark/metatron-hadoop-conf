@@ -169,7 +169,7 @@
      
     <property>
       <name>mapreduce.map.java.opts</name>
-      <value>-Xmx4g</value>
+      <value>-Xmx1024m</value>
     </property>
      
     <property>
@@ -214,7 +214,7 @@
      
     <property>
       <name>mapreduce.reduce.java.opts</name>
-      <value>-Xmx4g</value>
+      <value>-Xmx1024m</value>
     </property>
      
     <property>
@@ -274,7 +274,7 @@
      
     <property>
       <name>mapreduce.task.io.sort.mb</name>
-      <value>2047</value>
+      <value>256</value>
     </property>
      
     <property>
@@ -284,7 +284,7 @@
      
     <property>
       <name>yarn.app.mapreduce.am.command-opts</name>
-      <value>-Xmx4g</value>
+      <value>-Xmx1024m</value>
     </property>
      
     <property>
@@ -294,9 +294,34 @@
      
     <property>
       <name>yarn.app.mapreduce.am.resource.mb</name>
-      <value>2400</value>
+      <value>1024</value>
     </property>
-     
+    
+    <property>
+      <name>yarn.app.mapreduce.am.resource.cpu-vcores</name>
+      <value>1</value>
+    </property> 
+
+    <property>
+      <name>mapreduce.map.cpu.vcores</name>
+      <value>1</value>
+    </property> 
+
+    <property>
+      <name>mapreduce.map.memory.mb</name>
+      <value>1024</value>
+    </property> 
+
+    <property>
+      <name>mapreduce.reduce.cpu.vcores</name>
+      <value>1</value>
+    </property> 
+
+    <property>
+      <name>mapreduce.reduce.memory.mb</name>
+      <value>1024</value>
+    </property> 
+
     <property>
       <name>yarn.app.mapreduce.am.staging-dir</name>
       <value>/user</value>

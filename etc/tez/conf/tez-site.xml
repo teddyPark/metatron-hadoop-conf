@@ -1,7 +1,7 @@
 <configuration>
     <property>
       <name>tez.lib.uris</name>
-      <value>hdfs://master1:8020/apps/tez/tez-0.10.0.tar.gz</value>
+      <value>hdfs://master1.metatron-dev:8020/apps/tez/tez-0.10.0.tar.gz</value>
     </property>
 
     <property>

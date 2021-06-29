@@ -52,7 +52,7 @@
      
     <property>
       <name>hadoop.registry.zk.quorum</name>
-      <value>datanode1:2181,datanode2:2181,datanode3:2181</value>
+      <value>datanode1.metatron-dev:2181,datanode2.metatron-dev:2181,datanode3.metatron-dev:2181,datanode4.metatron-dev:2181,datanode5.metatron-dev:2181</value>
     </property>
      
     <property>
@@ -102,12 +102,12 @@
      
     <property>
       <name>yarn.log.server.url</name>
-      <value>http://master2:19888/jobhistory/logs</value>
+      <value>http://master2.metatron-dev:19888/jobhistory/logs</value>
     </property>
      
     <property>
       <name>yarn.log.server.web-service.url</name>
-      <value>http://master2:8188/ws/v1/applicationhistory</value>
+      <value>http://master2.metatron-dev:8188/ws/v1/applicationhistory</value>
     </property>
      
     <property>
@@ -326,12 +326,12 @@
      
     <property>
       <name>yarn.nodemanager.resource.cpu-vcores</name>
-      <value>3</value>
+      <value>4</value>
     </property>
      
     <property>
       <name>yarn.nodemanager.resource.memory-mb</name>
-      <value>12000</value>
+      <value>42052</value>
     </property>
      
     <property>
@@ -393,12 +393,12 @@
      
     <property>
       <name>yarn.resourcemanager.address</name>
-      <value>master2:8050</value>
+      <value>master2.metatron-dev:8050</value>
     </property>
      
     <property>
       <name>yarn.resourcemanager.admin.address</name>
-      <value>master2:8141</value>
+      <value>master2.metatron-dev:8141</value>
     </property>
      
     <property>
@@ -443,7 +443,7 @@
      
     <property>
       <name>yarn.resourcemanager.hostname</name>
-      <value>master2</value>
+      <value>master2.metatron-dev</value>
     </property>
      
     <property>
@@ -483,12 +483,12 @@
      
     <property>
       <name>yarn.resourcemanager.resource-tracker.address</name>
-      <value>master2:8025</value>
+      <value>master2.metatron-dev:8025</value>
     </property>
      
     <property>
       <name>yarn.resourcemanager.scheduler.address</name>
-      <value>master2:8030</value>
+      <value>master2.metatron-dev:8030</value>
     </property>
      
     <property>
@@ -523,7 +523,7 @@
      
     <property>
       <name>yarn.resourcemanager.webapp.address</name>
-      <value>master2:8088</value>
+      <value>master2.metatron-dev:8088</value>
     </property>
      
     <property>
@@ -538,7 +538,7 @@
      
     <property>
       <name>yarn.resourcemanager.webapp.https.address</name>
-      <value>master2:8090</value>
+      <value>master2.metatron-dev:8090</value>
     </property>
      
     <property>
@@ -558,7 +558,7 @@
      
     <property>
       <name>hadoop.zk.address</name>
-      <value>datanode1:2181,datanode2:2181,datanode3:2181</value>
+      <value>datanode1.metatron-dev:2181,datanode2.metatron-dev:2181,datanode3.metatron-dev:2181,datanode4.metatron-dev:2181,datanode5.metatron-dev:2181</value>
     </property>
      
     <property>
@@ -593,12 +593,12 @@
      
     <property>
       <name>yarn.scheduler.maximum-allocation-mb</name>
-      <value>6400</value>
+      <value>8192</value>
     </property>
      
     <property>
       <name>yarn.scheduler.maximum-allocation-vcores</name>
-      <value>2</value>
+      <value>16</value>
     </property>
      
     <property>
@@ -628,7 +628,7 @@
      
     <property>
       <name>yarn.timeline-service.address</name>
-      <value>master2:10200</value>
+      <value>master2.metatron-dev:10200</value>
     </property>
      
     <property>
@@ -778,12 +778,12 @@
      
     <property>
       <name>yarn.timeline-service.reader.webapp.address</name>
-      <value>master2:8198</value>
+      <value>master2.metatron-dev:8198</value>
     </property>
      
     <property>
       <name>yarn.timeline-service.reader.webapp.https.address</name>
-      <value>master2:8199</value>
+      <value>master2.metatron-dev:8199</value>
     </property>
      
     <property>
@@ -823,12 +823,12 @@
      
     <property>
       <name>yarn.timeline-service.webapp.address</name>
-      <value>master2:8188</value>
+      <value>master2.metatron-dev:8188</value>
     </property>
      
     <property>
       <name>yarn.timeline-service.webapp.https.address</name>
-      <value>master2:8190</value>
+      <value>master2.metatron-dev:8190</value>
     </property>
      
     <property>

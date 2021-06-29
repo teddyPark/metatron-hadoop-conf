@@ -6,7 +6,7 @@
 
     <property>
       <name>hive.cluster.delegation.token.store.zookeeper.connectString</name>
-      <value>datanode1:2181,datanode2:2181,datanode3:2181</value>
+      <value>datanode1.metatron-dev:2181,datanode2.metatron-dev:2181,datanode3.metatron-dev:2181,datanode4.metatron-dev:2181,datanode5.metatron-dev:2181</value>
     </property>
 
     <property>
@@ -46,7 +46,7 @@
 
     <property>
       <name>hive.zookeeper.quorum</name>
-      <value>datanode1:2181,datanode2:2181,datanode3:2181</value>
+      <value>datanode1.metatron-dev:2181,datanode2.metatron-dev:2181,datanode3.metatron-dev:2181,datanode4.metatron-dev:2181,datanode5.metatron-dev:2181</value>
     </property>
 
     <property>
@@ -56,7 +56,7 @@
 
     <property>
       <name>javax.jdo.option.ConnectionURL</name>
-      <value>jdbc:mysql://db1/hive</value>
+      <value>jdbc:mysql://db1.metatron-dev/hive</value>
     </property>
 
     <property>
@@ -76,7 +76,7 @@
 
     <property>
       <name>hive.metastore.uris</name>
-      <value>thrift://master2.metatron:9083</value>
+      <value>thrift://master2.metatron-dev:9083</value>
     </property>
 
     <property>

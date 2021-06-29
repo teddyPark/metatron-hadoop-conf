@@ -231,22 +231,22 @@
 
     <property>
       <name>dfs.namenode.http-address</name>
-      <value>master1:50070</value>
+      <value>master1.metatron-dev:50070</value>
       <final>true</final>
     </property>
 
     <property>
       <name>dfs.namenode.https-address</name>
-      <value>master1:50470</value>
+      <value>master1.metatron-dev:50470</value>
     </property>
 
     <property>
       <name>dfs.namenode.rpc-address</name>
-      <value>master1:8020</value>
+      <value>master1.metatron-dev:8020</value>
     </property>
     <property>
         <name>dfs.namenode.secondary.http-address</name>
-        <value>master2:50090</value>
+        <value>master2.metatron-dev:50090</value>
     </property>
 
     <property>
