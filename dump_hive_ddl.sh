@@ -5,7 +5,7 @@ rm -f HiveTableDDL.txt
 beeline -u $JDBC_URL --showHeader=false --outputformat=tsv2 -e "use $1; show tables;" > tableNames.txt
 #hive -e "use $1; show tables;" > tableNames.txt  
 wait
-echo -e "create database if not exists $1;" >>HiveTableDDL.txt
+echo -e "create database if not exists $1; use $1" >>HiveTableDDL.txt
 cat tableNames.txt |while read LINE
    do
    echo -e "drop table if exists $LINE;\n" >>HiveTableDDL.txt
