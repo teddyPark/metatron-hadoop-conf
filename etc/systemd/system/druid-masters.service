@@ -1,0 +1,23 @@
+[Unit]
+Description=druid queryserver Daemon
+Documentation=http://metatron.app
+Requires=network.target
+After=network.target namenode.service mysql.service
+ 
+[Service]   
+Environment="JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk"
+Environment="HADOOP_HOME=/usr/local/hadoop"
+Environment="HADOOP_CONF_DIR=/etc/hadoop/conf"
+Type=forking
+WorkingDirectory=/hadoop/druid-dir/druid-deploy/node
+User=metatron
+Group=metatron
+PermissionsStartOnly=true
+ExecStart=/hadoop/druid-dir/druid-deploy/node/bin/start-masters.sh
+ExecStop=/hadoop/druid-dir/druid-deploy/node/bin/stop-druid.sh 
+TimeoutSec=30
+#Restart=on-failure
+ 
+[Install]
+WantedBy=default.target
+

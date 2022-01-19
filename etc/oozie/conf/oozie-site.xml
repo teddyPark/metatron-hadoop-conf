@@ -242,5 +242,18 @@
       <name>use.system.libpath.for.mapreduce.and.pig.jobs</name>
       <value>false</value>
     </property>
-    
+
+    <property>
+        <name>oozie.launcher.dfs.nameservices</name>
+        <value>metatron</value>
+    </property>
+
+    <property>
+        <name>oozie.launcher.dfs.namenode.rpc-address.metatron</name>
+        <value>master1:8020</value>
+    </property>
+    <property>
+        <name>oozie.launcher.default.memory.mb</name>
+        <value>1024</value>
+    </property>    
   </configuration>

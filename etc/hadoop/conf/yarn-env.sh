@@ -177,3 +177,20 @@ export YARN_REGISTRYDNS_SECURE_USER=yarn
 
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 export YARN_CONF_DIR=/usr/local/hadoop/etc/hadoop
+export HADOOP_YARN_HOME=/usr/local/hadoop
+
+JAVA_HEAP_MAX=-Xmx1000m
+YARN_HEAPSIZE=1024
+
+# check envvars which might override default args
+if [ "$YARN_HEAPSIZE" != "" ]; then
+JAVA_HEAP_MAX="-Xmx""$YARN_HEAPSIZE""m"
+fi
+
+export YARN_RESOURCEMANAGER_HEAPSIZE=1024
+export YARN_NODEMANAGER_HEAPSIZE=1024
+export YARN_TIMELINESERVER_HEAPSIZE=8072
+
+export YARN_NODEMANAGER_OPTS="$YARN_NODEMANAGER_OPTS -Dnm.audit.logger=INFO,NMAUDIT"
+export YARN_RESOURCEMANAGER_OPTS="$YARN_RESOURCEMANAGER_OPTS -Dyarn.server.resourcemanager.appsummary.logger=INFO,RMSUMMARY -Drm.audit.logger=INFO,RMAUDIT"
+

@@ -184,4 +184,17 @@
       <value>/tmp/hadoop-${user.name}</value>
     </property>
 
+    <property>
+      <name>dfs.ha.namenodes.metatron</name>
+      <value>master1</value>
+    </property>
+    <property>
+      <name>dfs.namenode.rpc-address.metatron.master1</name>
+      <value>master1:8020</value>
+    </property>
+    <property>
+      <name>dfs.namenode.http-address.metatron.master1</name>
+      <value>master1:50070</value>
+    </property>
+
 </configuration>

@@ -117,6 +117,7 @@ export ZOOBINDIR=/usr/local/zookeeper/bin
  
 # Hive env-vars
 export HIVE_HOME=/usr/local/hive
+export USE_BEELINE_FOR_HIVE_CLI=true
  
 # sqoop env-vars
 export SQOOP_HOME=/usr/local/sqoop

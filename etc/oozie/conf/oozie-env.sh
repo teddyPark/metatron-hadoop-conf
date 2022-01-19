@@ -16,7 +16,7 @@ export JRE_HOME=${JAVA_HOME}
 # Java System properties for Oozie should be specified in this variable
 #
 
-export CATALINA_OPTS="$CATALINA_OPTS -Xmx2048m"
+export CATALINA_OPTS="$CATALINA_OPTS -Xmx1024m"
 
 # Oozie configuration file to load from Oozie configuration directory
 #

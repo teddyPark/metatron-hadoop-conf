@@ -43,3 +43,5 @@
 # Specify the log4j settings for the JobHistoryServer
 # Java property: hadoop.root.logger
 #export HADOOP_JHS_LOGGER=INFO,RFA
+
+export HADOOP_JOB_HISTORYSERVER_HEAPSIZE=900
