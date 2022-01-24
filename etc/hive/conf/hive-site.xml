@@ -418,6 +418,10 @@
       <name>hive.metastore.event.db.notification.api.auth</name>
       <value>false</value>
     </property>
+    <property>
+      <name>metastore.partition.management.task.frequency</name>
+      <value>600</value>
+    </property>
 
    
 </configuration>
